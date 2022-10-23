@@ -36,4 +36,8 @@ module.exports = {
             protectWebpackAssets: false
         }),
     ],
+    output: {
+        libraryTarget: 'var',
+        library: 'Client',
+    },
 };

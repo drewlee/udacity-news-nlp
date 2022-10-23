@@ -7,11 +7,13 @@ function handleSubmit(event) {
 
     console.log('::: Form Submitted :::');
 
-    fetch('http://localhost:8080/test')
-        .then(res => res.json())
-        .then(function(res) {
-            document.getElementById('results').innerHTML = res.message;
-        });
+    fetch('http://localhost:8081/analyze', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain'
+        },
+        body: 'Hello, world!',
+    });
 }
 
 export { handleSubmit };

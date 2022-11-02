@@ -4,12 +4,12 @@ import './styles/footer.scss';
 import './styles/form.scss';
 import './styles/header.scss';
 
-import { checkForName } from './js/nameChecker';
+import { checkForURL } from './js/urlChecker';
 import { handleSubmit } from './js/formHandler';
 
-console.log(handleSubmit);
+// console.log(handleSubmit);
 
 export {
-  checkForName,
+  checkForURL,
   handleSubmit
 };

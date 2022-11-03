@@ -19,10 +19,11 @@ function handleSubmit(event) {
                 message = 'Please enter a valid URL.';
         }
 
-        resultsEl.textContent = message;
+        resultsEl.innerHTML = `<p class="error">${message}</p>`;
     } else {
         console.log('::: Form Submitted :::');
         // https://designformankind.com/2020/07/this-is-your-gap-year/
+        resultsEl.textContent = 'Loading...';
 
         fetch('http://localhost:8081/analyze', {
             method: 'POST',
@@ -55,7 +56,7 @@ function handleSubmit(event) {
         })
         .catch((error) => {
             console.error(error);
-            resultsEl.textContent = 'Encountered a technical error. Please try again later.';
+            resultsEl.innerHTML = '<p class="error">Encountered an unexpected technical error. Please try again later.</p>';
         });
     }
 }

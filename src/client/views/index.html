@@ -2,18 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Simple Sentiment Analysis App</title>
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="logo">
+                Simple Sentiment Analysis App
             </div>
-            <div class="">
-                navigation
-            </div>
+            <nav class="navigation">
+                <a href="https://www.meaningcloud.com/" target="_blank">Meaning Cloud</a>
+            </nav>
         </header>
 
         <main>
@@ -31,8 +31,18 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>&copy; 2022</p>
         </footer>
 
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .catch((error) => {});
+                });
+            }
+        </script>
     </body>
 </html>

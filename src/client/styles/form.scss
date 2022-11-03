@@ -9,4 +9,12 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+.error {
+    color: #cb0000
 }

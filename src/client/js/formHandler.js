@@ -22,7 +22,7 @@ function handleSubmit(event) {
         resultsEl.innerHTML = `<p class="error">${message}</p>`;
     } else {
         console.log('::: Form Submitted :::');
-        // https://designformankind.com/2020/07/this-is-your-gap-year/
+
         resultsEl.textContent = 'Loading...';
 
         fetch('http://localhost:8081/analyze', {

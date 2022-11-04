@@ -7,8 +7,6 @@ import './styles/header.scss';
 import { checkForURL } from './js/urlChecker';
 import { handleSubmit } from './js/formHandler';
 
-// console.log(handleSubmit);
-
 export {
   checkForURL,
   handleSubmit

@@ -58,7 +58,6 @@ app.post('/analyze', (req, res) => {
     })
     .then((data) => {
         const { score_tag, subjectivity, sentence_list } = data;
-        console.log(sentence_list);
 
         if (score_tag && subjectivity && sentence_list) {
             const randomIndex = Math.round(Math.random() * sentence_list.length);
